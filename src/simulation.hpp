@@ -1,4 +1,5 @@
 #include "grid.hpp"
+#include <string>
 
 class Simulation{
     public:
@@ -10,6 +11,7 @@ class Simulation{
         void Stop(){run = false;};
         void FillRandom();
         void FillPattern(vector<vector<int>> vec);
+        void FillPlainText(string str);
         void ClearGrid();
         void ToggleCell(int row, int column);
         int CountLiveNeighbors(int row, int column);

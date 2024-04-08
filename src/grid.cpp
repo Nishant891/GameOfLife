@@ -1,6 +1,6 @@
 #include <raylib.h>
 #include "grid.hpp"
-#include <tuple>
+#include <string>
 
 // Color Gray = {29, 29, 29, 255};
 
@@ -40,6 +40,24 @@ void Grid::RandomInitialization(){
 void Grid::PatternInitialization(vector<vector<int>> vec){
     for(auto &i: vec){
             SetVal(i[0],i[1],i[2]);
+    }
+}
+
+void Grid::PlainTextInitialization(string str){
+    int row = 20;
+    int col = 20;
+    for(char c : str){
+        if(row < rows && col < columns){
+            if(c == 'O'){
+                SetVal(row, col, 1);
+            }
+            if(c == '\n'){
+                row++;
+                col = 20;
+            }else{
+                col++;
+            }
+        }
     }
 }
 

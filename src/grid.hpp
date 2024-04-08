@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <string>
 using namespace std;
 
 class Grid{
@@ -10,6 +11,7 @@ class Grid{
     void SetVal(int row, int column, int value);
     void RandomInitialization();
     void PatternInitialization(vector<vector<int>> vec);
+    void PlainTextInitialization(string str);
     void Clear();
     void ToggleCell(int row, int column);
     int GetVal(int row, int column);

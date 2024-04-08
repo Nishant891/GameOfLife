@@ -2,6 +2,7 @@
 #include <vector>
 #include <utility>
 #include "simulation.hpp"
+#include <string>
 
 using namespace std;
 
@@ -121,6 +122,13 @@ void Simulation::FillPattern(vector<vector<int>> vec)
 {
     if(!IsRunning()){
         grid.PatternInitialization(vec);
+    }
+}
+
+void Simulation::FillPlainText(string str)
+{
+    if(!IsRunning()){
+        grid.PlainTextInitialization(str);
     }
 }
 
