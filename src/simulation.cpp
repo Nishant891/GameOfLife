@@ -118,17 +118,10 @@ void Simulation::FillRandom()
     }
 }
 
-void Simulation::FillPattern(vector<vector<int>> vec)
+void Simulation::FillPlainText(string str, int offsetX, int offsetY)
 {
     if(!IsRunning()){
-        grid.PatternInitialization(vec);
-    }
-}
-
-void Simulation::FillPlainText(string str)
-{
-    if(!IsRunning()){
-        grid.PlainTextInitialization(str);
+        grid.PlainTextInitialization(str, offsetX, offsetY);
     }
 }
 

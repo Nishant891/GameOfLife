@@ -10,8 +10,7 @@ class Simulation{
         void Start(){run = true;};
         void Stop(){run = false;};
         void FillRandom();
-        void FillPattern(vector<vector<int>> vec);
-        void FillPlainText(string str);
+        void FillPlainText(string str, int offsetX, int offsetY);
         void ClearGrid();
         void ToggleCell(int row, int column);
         int CountLiveNeighbors(int row, int column);

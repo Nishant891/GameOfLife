@@ -37,15 +37,9 @@ void Grid::RandomInitialization(){
     }
 }
 
-void Grid::PatternInitialization(vector<vector<int>> vec){
-    for(auto &i: vec){
-            SetVal(i[0],i[1],i[2]);
-    }
-}
-
-void Grid::PlainTextInitialization(string str){
-    int row = 20;
-    int col = 20;
+void Grid::PlainTextInitialization(string str, int offsetX, int offsetY){
+    int row = offsetX;
+    int col = offsetY;
     for(char c : str){
         if(row < rows && col < columns){
             if(c == 'O'){
